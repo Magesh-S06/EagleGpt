@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EagleGPT</title>
+    <LINK REL="stylesheet" href="{{url_for('static',filename='textstyles.css')}}">
+</head>
+<body>
+    <section class="left-side-bar">
+        <button id="new_chat">+ New Chat</button>
+        <div class="history"></div>
+        <nav>
+            <p>Made by Magesh & Dharshini</p>
+        </nav>
+    </section>
+
+    <section class="main">
+        <h1>EagleGPT</h1>
+        <div class="chat_container"></div>
+        <div class="bottom-section">
+            <div class="input-container">
+                <textarea placeholder="Ask anything..."></textarea>
+                <div id="submit">➤</div>
+            </div>
+        </div>
+        <p class="info">EagleGPT can make mistakes. Please use with discretion.</p>
+    </section>
+    <section class="right-side-bar">
+        <p class="other">Other Capabilities:</p>
+        <div class="links">
+            <button data-url="{{ url_for('imageindex') }}">Image Generation</button>
+            <button data-url="{{ url_for('ttsindex') }}">Text To Speech</button>
+            <button data-url="{{ url_for('audioindex') }}">Audio Generation</button>
+            <button data-url="{{ url_for('whisperindex') }}">Speech To Text</button>
+            <button data-url="{{ url_for('reasindex') }}">Reasoning</button>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="{{url_for('static',filename='textapp.js')}}"></script>
+</body>
+</html>

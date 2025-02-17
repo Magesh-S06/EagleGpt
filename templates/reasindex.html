@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reasoning Bot</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='reasstyles.css')}}" />
+</head>
+<body>
+    <section class="side-bar">
+        <button id="new-chat">+ New Chat</button>
+        <div class="history"></div>  
+    </section>
+    <section class="main">
+        <button class="home-button" data-url="{{ url_for('textindex') }}">🏠 Home</button>
+        <h1>AI Problem Solver</h1>
+        <div class="chat-container"></div>
+        <div class="bottom-section">
+            <div class="input-container">
+                <textarea placeholder="Ask a problem..."></textarea>
+                <div id="submit">➤</div>
+            </div>
+        </div>
+        <p class="info">EagleGPT can make mistakes. Please use with discretion.</p>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="{{url_for('static',filename='reasapp.js')}}"></script>
+</body>
+</html>
